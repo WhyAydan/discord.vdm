@@ -77,8 +77,6 @@ typings/
 # FuseBox cache
 .fusebox/
 
-settings.json
-
 # Sqlite database file
 *.sqlite
 settings_old.json

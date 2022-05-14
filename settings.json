@@ -1,5 +1,0 @@
-{
-    "token": "process.env.token",
-    "role": "process.env.role",
-    "authors": "process.env.authors"
-}
