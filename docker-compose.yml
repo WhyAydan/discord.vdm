@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  vdm:
+    image: whyaydan/discord_vdm
+    restart: unless-stopped
+    env_file:
+      -  .env
+    volumes:
+          -  VDM:/app/database
+volumes:
+  VDM:
