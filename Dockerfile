@@ -17,4 +17,4 @@ RUN npm install
 
 USER node
 
-CMD ["node", "--experimental-json-modules", "./index.mjs"]
+CMD ["node", "--experimental-json-modules", "index.mjs"]
