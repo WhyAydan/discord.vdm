@@ -4,9 +4,7 @@ services:
   vdm:
     image: whyaydan/discord_vdm
     restart: unless-stopped
-    environment:
-      - AUTHORS=""
-      - ROLE=""
-      - DISCORD_TOKEN=“”
+    env_file:
+      -  .env
     volumes:
-      - /database:/database
+      - /database:/app/database
