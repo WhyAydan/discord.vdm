@@ -4,7 +4,8 @@ import { MessageActionRow, MessageButton, WebhookClient, Permissions } from 'dis
 import { write, read, fetchAll, update, remove } from '../database/index.js';
 import { optionFetch } from '../utilities.mjs';
 
-import settings from '../settings.json' assert {type: 'json'};
+import dotenv from 'dotenv'
+dotenv.config()
 
 
 export const name = 'ticket';
@@ -218,7 +219,7 @@ export default async (interaction, client) => {
                 const alert = await read("set", { id: 'alert' });
 
                 // Introduction
-                let introduction = await thread.send(`**${interaction.user.username}** has opened a new ${(alert?.value == 'true') ? `<@&${settings.role}>` : 'ticket' } for **${targetUser}**.\n\n*They joined discord <t:${(open.createdAt.getTime()/1000).toFixed(0)}:R> and have an id of \`${open.id}\`.*`);
+                let introduction = await thread.send(`**${interaction.user.username}** has opened a new ${(alert?.value == 'true') ? `<@&${process.env.ROLE}>` : 'ticket' } for **${targetUser}**.\n\n*They joined discord <t:${(open.createdAt.getTime()/1000).toFixed(0)}:R> and have an id of \`${open.id}\`.*`);
                 introduction.pin();
 
                 // Places a message in the thread
