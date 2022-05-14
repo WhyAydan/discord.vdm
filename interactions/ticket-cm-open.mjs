@@ -56,7 +56,7 @@ export default async (interaction, client) => {
         const alert = await read("set", { id: 'alert' });
 
         // Introduction
-        let introduction = await thread.send(`**${interaction.user.username}** has opened a new ${(alert?.value == 'true') ? `<@&${process.env.ROLE}>` : 'ticket' } for **${targetUser}**.\n\n*They joined discord <t:${(open.createdAt.getTime()/1000).toFixed(0)}:R> and have an id of \`${open.id}\`.*`);
+        let introduction = await thread.send(`**${interaction.user.username}** has opened a new ticket ${(alert?.value == 'true') ? `<@&${process.env.ROLE}>` : 'ticket' } for **${targetUser}**.\n\n*They joined discord <t:${(open.createdAt.getTime()/1000).toFixed(0)}:R> and have an id of \`${open.id}\`.*`);
         introduction.pin();
         
 
