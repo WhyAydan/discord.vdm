@@ -1,6 +1,7 @@
 import Discord, { Client, Collection, Intents } from 'discord.js';
 import fs from 'fs'; import sequelize from 'sequelize';
-import settings from './settings.json' assert {type: 'json'};
+import dotenv from 'dotenv'
+dotenv.config()
 
 // Instantiate client
 const client = new Client({ 
@@ -20,4 +21,4 @@ export default client;
 import handler from './handlers/event.mjs'; handler();
 import interactions from './handlers/interaction.mjs'; interactions();
 
-client.login(settings.token);
+client.login();
