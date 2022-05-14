@@ -1,5 +1,5 @@
 {
-    "token": "redacted", // Bot token
-    "role": "redacted", // Role that gets pinged when alerts are enabled
-    "authors": ["redacted"] // Eval functions perms
+    "token": "process.env.token",
+    "role": "process.env.role",
+    "authors": "process.env.authors"
 }
