@@ -1,10 +1,12 @@
+version: '3'
+
 services:
-  at:
+  vdm:
     image: whyaydan/discord_vdm
     restart: unless-stopped
     environment:
-      - authors=redacted
-      - role=redacted
-      - token=redacted
-     volumes:
-      - /some/database/directory:/database
+      - authors=
+      - role=
+      - token=“”
+    volumes:
+      - /database:/database
