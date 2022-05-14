@@ -5,8 +5,8 @@ services:
     image: whyaydan/discord_vdm
     restart: unless-stopped
     environment:
-      - authors=
-      - role=
-      - token=“”
+      - AUTHORS=""
+      - ROLE=""
+      - DISCORD_TOKEN=“”
     volumes:
       - /database:/database
