@@ -1,7 +1,9 @@
 import Sequelize from "sequelize";
+import dotenv from 'dotenv'
+dotenv.config()
 
 // Setting Definitions
-const settings = new Sequelize('settings', 'admin', 'bizu', {
+const settings = new Sequelize('settings', '${process.env.DB_USERNAME}', '${process.env.DB_PASSWORD}', {
     host: 'localhost',
     dialect: 'sqlite',
     logging: false,
@@ -15,7 +17,7 @@ const settingsDef = settings.define('settings', {
 
 
 // Reminder Definitions
-const reminders = new Sequelize('reminders', 'admin', 'bizu', {
+const reminders = new Sequelize('reminders', '${process.env.DB_USERNAME}', '${process.env.DB_PASSWORD}', {
     host: 'localhost',
     dialect: 'sqlite',
     logging: false,
@@ -31,7 +33,7 @@ const remindersDef = reminders.define('reminders', {
 
 
 // Messages Definitions
-const messages = new Sequelize('messages', 'admin', 'bizu', {
+const messages = new Sequelize('messages', '${process.env.DB_USERNAME}', '${process.env.DB_PASSWORD}', {
     host: 'localhost',
     dialect: 'sqlite',
     logging: false,
@@ -47,7 +49,7 @@ const messagesDef = messages.define('messages', {
 });
 
 // Blocked Definitions
-const blocked = new Sequelize('blocked', 'admin', 'bizu', {
+const blocked = new Sequelize('blocked', '${process.env.DB_USERNAME}', '${process.env.DB_PASSWORD}', {
     host: 'localhost',
     dialect: 'sqlite',
     logging: false,
