@@ -1,6 +1,6 @@
 {
   "name": "discord.vdm",
-  "author": "Smultar",
+  "author": "Aydan",
   "version": "1.0.0",
   "description": "Virtual Direct messages manager",
   "license": "ISC",
@@ -10,12 +10,6 @@
     "dev": "nodemon --experimental-json-modules index.mjs",
     "start": "node --experimental-json-modules index.mjs"
   },
-  "keywords": [
-    "Discord",
-    "Smultar",
-    "Art",
-    "People"
-  ],
   "dependencies": {
     "@discordjs/builders": "^0.12.0",
     "@discordjs/rest": "^0.3.0",
