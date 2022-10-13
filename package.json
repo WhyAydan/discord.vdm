@@ -1,7 +1,7 @@
 {
   "name": "discord.vdm",
   "author": "Aydan",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Virtual Direct messages manager",
   "license": "ISC",
   "main": "index.mjs",
