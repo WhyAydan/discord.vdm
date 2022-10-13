@@ -1,12 +1,12 @@
-version: '3'
-
 services:
   vdm:
-    image: whyaydan/discord_vdm
+    image: whyaydan/discord_vdm:latest
     restart: unless-stopped
-    env_file:
-      -  .env
+    enviroment:
+      - AUTHORS=""
+      - ROLE=""
+      - DISCORD_TOKEN=""
     volumes:
-          -  VDM:/app/database
+      -  database:/app/database
 volumes:
-  VDM:
+  database:
