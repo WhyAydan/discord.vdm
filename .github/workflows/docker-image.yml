@@ -2,7 +2,9 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - 'master'
+      - 'preview'
 
 jobs:
   build:
@@ -25,7 +27,8 @@ jobs:
       with:
           images: whyaydan/discord_vdm
           tags: |
-            type=semver,pattern={{version}},value=${{ steps.package-version.outputs.current-version}}
+            type=ref,event=branch
+            type=semver,pattern={{version}},value=${{ steps.package-version.outputs.current-version }}
     - name: Build and push Docker image
       uses: docker/build-push-action@v3
       with:
