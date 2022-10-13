@@ -28,7 +28,6 @@ jobs:
           images: whyaydan/discord_vdm
           tags: |
             type=ref,event=branch
-            type=semver,pattern={{version}},value=${{ steps.package-version.outputs.current-version }}
     - name: Build and push Docker image
       uses: docker/build-push-action@v3
       with:
