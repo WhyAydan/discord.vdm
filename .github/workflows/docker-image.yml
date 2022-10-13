@@ -26,10 +26,7 @@ jobs:
       uses: docker/metadata-action@v4
       with:
           images: whyaydan/discord_vdm
-          tags: |
-            type=ref,event=branch
-            type=ref,event=pr
-            type=raw,${{ steps.package-version.outputs.current-version}}
+          tags: ${{ steps.package-version.outputs.current-version}}
     - name: Build and push Docker image
       uses: docker/build-push-action@v3
       with:
