@@ -1,4 +1,4 @@
-FROM node:current-alpine
+FROM node:21.2-alpine3.18
 COPY package.json /tmp/package.json
 RUN cd /tmp && npm install
 RUN mkdir /app && cp -a /tmp/node_modules /app/
