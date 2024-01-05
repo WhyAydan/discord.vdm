@@ -16,7 +16,7 @@
     "discord-api-types": "^0.27.1",
     "discord.js": "^13.6.0",
     "dotenv": "^16.0.1",
-    "glob": "^7.2.0",
+    "glob": "^10.0.0",
     "node": "17.4.0",
     "sequelize": "^6.23.1",
     "sqlite3": "^5.0.0",
